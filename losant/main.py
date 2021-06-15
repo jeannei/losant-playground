@@ -106,6 +106,6 @@ if __name__ == '__main__':
                     state_val = random.random() * 100
                     device.send_state({sensor_attribute: state_val})
                 elif value["event_type"] == "bool":
-                    state_val = True if random.random() * 100 > 60 else False
+                    state_val = random.random() > 60 / 100
                     device.send_state({sensor_attribute: state_val})
         time.sleep(4)
